@@ -3,11 +3,12 @@
 
 :root {
     --color-bg: #E7E4DE;
-    --color-bg-variant: #FDFDFC;
+    --color-bg-variant: #F5EEE3;
     --color-text: #1E1E1E;
     --color-heading: #644930;
     --color-primary: #C2AA82;
     --color-primary-variant: #7C6145;
+    --color-white: #FFFFFF;
 
     --transition: all 400ms ease;
 
@@ -32,7 +33,7 @@ html,
 body {
     scroll-behavior: smooth;
 }
-
+ 
 ::-webkit-scrollbar {
     display: none;
 }
@@ -46,13 +47,16 @@ body {
 
 a {
     text-decoration: none;
+    color: var(--color-primary-variant);
 }
 
 .btn {
     display: inline-block;
     width: max-content;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
     padding: 0.6rem 1.5rem;
-    font-weight: 500;
+    font-weight: 600;
     background: transparent;
     color: var(--color-text);
     border: 1px solid var(--color-primary-variant);
@@ -75,6 +79,11 @@ a {
 .btn-primary:hover {
     color: var(--color-text);
     transition: var(--transition);
+}
+
+input {
+    outline: transparent;
+    border: transparent;
 }
 
 /* Media queries */
