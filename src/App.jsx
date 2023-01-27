@@ -1,17 +1,15 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-
-import Header from './components/header/Header';
-import MainContainer from './components/mainContainer/MainContainer';
+import { Header, MainContainer, RegisterContainer } from './components';
 
 const App = () => {
   return (
     <div>
       <Header />
-
       <main>
         <Routes>
-            <Route path='/*' element={<MainContainer/>} />
+          <Route path='/*' element={<MainContainer />}/>
+          <Route path='/register' element={<RegisterContainer />}/>
         </Routes>
       </main>
     </div>

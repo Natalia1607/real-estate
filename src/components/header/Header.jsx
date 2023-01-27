@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CTA from './CTA';
 import './headerStyles.css';
 
@@ -8,10 +9,10 @@ const Header = () => {
   return (
     <header>
       <div className="container header__container">
-        <a href="!#" className='header__logotip'>
+        <Link to={'/'} className='header__logotip'>
             Dillantum.<br />
             <small>RealEstate</small>
-        </a>
+        </Link>
         <CTA />
       </div>
     </header>
