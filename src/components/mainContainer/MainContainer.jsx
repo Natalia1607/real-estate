@@ -10,7 +10,7 @@ const MainContainer = () => {
       <div className='main__container_carousel'>
         <ImgCarousel/>
       </div>
-      <h1>WE FIND APPROPRIATE PROPERTY</h1>
+      <h1>FIND YOUR APPROPRIATE PROPERTY</h1>
       <CTAMain />
     </div>
   )

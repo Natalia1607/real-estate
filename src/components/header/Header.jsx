@@ -7,11 +7,11 @@ import './headerStyles.css';
 
 const Header = () => {
   return (
-    <header>
-      <div className="container header__container">
+    <header className='container'>
+      <div className="header__container">
         <Link to={'/'} className='header__logotip'>
-            Dillantum.<br />
-            <small>RealEstate</small>
+            Dillantum.
+            <small>Real Estate</small>
         </Link>
         <CTA />
       </div>

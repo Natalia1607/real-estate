@@ -6,11 +6,11 @@ const RegisterContainer = () => {
   return (
     <div className='container form__container'>
       <div className='form__bg'></div>
-      <div className="register__right">
+      <div className="form__right register__right">
         <p>Already a member?<Link to={'/sign-in'}> Sign In</Link></p>
         <h2>Register</h2>
-        <form action="#" className='register__form'>
-            <div className="register__data">
+        <form action="#" className='form'>
+            <div className="form__data register__data">
                 <div className="input-wrap">
                   <label>Name</label><br />
                   <input type="text" />

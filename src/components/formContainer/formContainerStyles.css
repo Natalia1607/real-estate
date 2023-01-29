@@ -1,5 +1,4 @@
 /* General styles */
-
 .form__container {
     display: grid;
     grid-template-columns: 0.9fr 1fr;
@@ -14,16 +13,12 @@
     width: 100%;
 }
 
-.register__right {
-    margin-top: 10vh;
-}
-
-.register__right > p {
+.form__right > p {
     margin-bottom: 60px;
     text-align: right;
 }
 
-.register__right h2 {
+.form__right h2 {
     margin-bottom: 36px;
     font-weight: 700;
     font-size: 26px;
@@ -31,16 +26,32 @@
     color: var(--color-text);
 }
 
-.register__form {
+.sign__right {
+    margin-top: 20vh;
+}
+
+.register__right {
+    margin-top: 10vh;
+}
+
+.form {
     width: 410px;
 }
 
-.register__data {
+.form__data {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 24px;
     width: 100%;
+}
+
+.sign__data {
+    margin-bottom: 36px;
+}
+
+.sign__data .input-wrap input[type='text'] {
+    width: 410px;
 }
 
 .input-wrap label {
@@ -76,46 +87,14 @@
     margin-top: 8px;
 }
 
-.register__form .btn {
+/* button */
+.form .btn {
     background: var(--color-primary);
     border-color: var(--color-primary);
-}
-
-.register__form .btn:hover {
-    border: 1px solid var(--color-primary);
-    background: transparent
-}
-
-.sign__right {
-    margin-top: 20vh;
-}
-
-.sign__right > p {
-    margin-bottom: 60px;
-    text-align: right;
-}
-
-.sign__right h2 {
-    margin-bottom: 36px;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 130%;
     color: var(--color-text);
 }
 
-.sign__form {
-    width: 410px;
-}
-
-.sign__data {
-    margin-bottom: 36px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 24px;
-    width: 100%;
-}
-
-.sign__data .input-wrap input[type='text'] {
-    width: 410px;
+.form .btn:hover {
+    border: 1px solid var(--color-primary);
+    background: transparent
 }

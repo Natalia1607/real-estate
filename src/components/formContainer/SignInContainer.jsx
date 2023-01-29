@@ -5,10 +5,10 @@ const SignInContainer = () => {
   return (
     <div className='container form__container'>
     <div className='form__bg'></div>
-      <div className="sign__right">
-        <h2>Sign in</h2>
-        <form action="#" className='sign__form'>
-            <div className="sign__data">
+      <div className="form__right sign__right">
+        <h2>Sign in</h2> 
+        <form action="#" className='form'>
+            <div className="form__data sign__data">
                 <div className="input-wrap">
                   <label>Username</label><br />
                   <input type="text" />

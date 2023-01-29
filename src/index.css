@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
 
 :root {
@@ -10,7 +10,10 @@
     --color-primary-variant: #7C6145;
     --color-white: #FFFFFF;
 
-    --transition: all 400ms ease;
+    --font-main: 'Montserrat', sans-serif;
+    --font-heading: 'Playfair Display', serif;
+
+    --transition: all 700ms ease;
 
     --container-width-lg: 75%;
     --container-width-md: 86%;
@@ -25,7 +28,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background: var(--color-bg);
 }
 
@@ -42,6 +45,7 @@ body {
 
 .container {
     width: var(--container-width-lg);
+    max-width: 1140px;
     margin: 0 auto;
 }
 
