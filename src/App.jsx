@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Header, MainContainer, RegisterContainer, SignInContainer } from './components';
-import { Rent } from './page';
+import { Header, MainContainer, RegisterContainer, SignInContainer, Footer } from './components';
+import { Buy, Rent } from './page';
 
 const App = () => {
   return (
@@ -14,9 +14,14 @@ const App = () => {
           <Route path='/sign-in' element={<SignInContainer />}/>
           <Route path='/rent' element={<Rent />}>
             <Route path='/rent/rent-daily' element={<Rent />}/>
+            <Route path='/rent/rent-monthly' element={<Rent />}/>
+            <Route path='/rent/rent-yearly' element={<Rent />}/>
+            <Route path='/rent/rent-commercial' element={<Rent />}/>
           </Route>
+          <Route path='/buy' element={<Buy />}/>
         </Routes>
       </main>
+      <Footer />
     </div>
   )
 }
