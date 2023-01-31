@@ -1,6 +1,6 @@
 import { Breadcrumb } from 'antd';
 import React from 'react';
-import { Cards, Search } from '../components';
+import { Cards, Search, Footer } from '../components';
 import './page.css';
 
 
@@ -31,6 +31,7 @@ const Buy = () => {
                 <Cards />
             </div>
         </div>
+        <Footer />
     </div>
   )
 }

@@ -4,7 +4,7 @@ import './footerStyles.css';
 
 const Footer = () => {
   return (
-    <div className='container footer__container'>
+    <div className='footer__container'>
       <div className="footer__icons">
         <AiOutlineWhatsApp />
         <AiOutlineMail />

@@ -11,7 +11,7 @@ import slide6 from '../../assets/slide6.jpg';
 const ImgCarousel = () => {
   return (
     <div className='carousel'>
-        <div className='carousel__item carousel__item-l'>
+        <div  className='carousel__item carousel__item-l'>
             <div className='carousel__img'>
                 <img src={slide1} alt="#" />
             </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Header, MainContainer, RegisterContainer, SignInContainer, Footer } from './components';
+import { Header, MainContainer, RegisterContainer, SignInContainer } from './components';
 import { Buy, Rent } from './page';
 
 const App = () => {
@@ -21,7 +21,6 @@ const App = () => {
           <Route path='/buy' element={<Buy />}/>
         </Routes>
       </main>
-      <Footer />
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { Breadcrumb } from 'antd';
-import { Cards, Tabs, Search } from '../components';
+import { Cards, Tabs, Search, Footer } from '../components';
 import './page.css';
 
 const Rent = () => {
@@ -36,6 +36,7 @@ const Rent = () => {
                 </div>
             </div>
         </div>
+        <Footer />
     </div>
   )
 }

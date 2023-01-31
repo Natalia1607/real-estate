@@ -31,3 +31,18 @@ header {
     justify-content: center;
     gap: 1.2rem;
 }
+
+/* media */
+@media screen and (max-width: 768px) {
+    .md-flex {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .md-hidden {
+        visibility: hidden;
+        display: none;
+    }
+}
