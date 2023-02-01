@@ -10,40 +10,24 @@ import slide6 from '../../assets/slide6.jpg';
 import Slider from 'react-slick';
 
 const ImgCarousel = () => {
-    const settings_l = {
+    const settings = {
         arrows: false,
         dots: false,
         initialSlide: 0,
-        easing:'linear',
+        cssEase: 'linear',
         draggable:true,
         swipe:true,
-        speed: 9000,
+        speed: 10000,
         slidesToScroll: 1,
         autoplay: true,
+        autoplaySpeed: 0,
         infinite:true,
         vertical: true,
         verticalSwiping: true,
       };
-
-    const settings_r = {
-        speed: 10000,
-      };
-    
-      /* const generateSlides = ({slides}) => {
-        if(slides){
-             return (
-                <Slider {...settings}>
-                <div>
-                    {slides.map((item)=><div key={item.id}><SlideElement item={item} /></div>
-                    )}
-                    </div> 
-                </Slider>
-            )
-        }
-    } */
   return (
     <div className='carousel'>
-        <Slider  className='carousel__item carousel__item-l' {...settings_l}>
+        <Slider  className='carousel__item carousel__item-l' {...settings}>
             <div className='carousel__img'>
                 <img src={slide1} alt="#" />
             </div>
@@ -54,7 +38,7 @@ const ImgCarousel = () => {
                 <img src={slide3} alt="#" />
             </div>
         </Slider>
-        <Slider className='carousel__item carousel__item-r' {...settings_l} {...settings_r}>
+        <Slider className='carousel__item carousel__item-r' {...settings}>
             <div className='carousel__img'>
                 <img src={slide4} alt="#" />
             </div>

@@ -7,7 +7,7 @@ import './mainContainerStyles.css';
 const MainContainer = () => {
   return (
     <div className='container main__container'>
-      <div className='main__container_carousel'>
+      <div className='main__container_carousel md-flex'>
         <ImgCarousel/>
       </div>
       <h1>

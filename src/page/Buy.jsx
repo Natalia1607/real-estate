@@ -1,5 +1,6 @@
 import { Breadcrumb } from 'antd';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Cards, Search, Footer } from '../components';
 import './page.css';
 
@@ -9,7 +10,7 @@ const Buy = () => {
     <div className="container">
         <div className='banner'>
             <p>Popular searches</p>
-            <h2>Buy</h2>
+            <h2><Link to={'/buy'}>Buy</Link></h2>
         </div>
         <div className="content__container">
             <Search />

@@ -2,10 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './formContainerStyles.css';
 
+import Table from '../../assets/table.jpg';
+
+import './mask.js';
+
 const RegisterContainer = () => {
   return (
     <div className='container form__container'>
-      <div className='form__bg'></div>
+      <div className='form__bg'><img src={Table} alt="" /></div>
       <div className="form__right register__right">
         <p>Already a member?<Link to={'/sign-in'}> Sign In</Link></p>
         <h2>Register</h2>
@@ -21,7 +25,7 @@ const RegisterContainer = () => {
                 </div>
                 <div className="input-wrap">
                   <label>Number</label><br />
-                  <input type="tel" />
+                  <input type="tel" className='tel'/>
                 </div>
                 <div className="input-wrap">
                   <label>Password</label><br />

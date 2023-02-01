@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Breadcrumb } from 'antd';
 import { Cards, Tabs, Search, Footer } from '../components';
 import './page.css';
@@ -11,7 +11,7 @@ const Rent = () => {
     <div className="container">
         <div className='banner'>
             <p>Popular searches</p>
-            <h2>Rent</h2>
+            <h2><Link to={'/rent'}>Rent</Link></h2>
         </div>
         <div className="content__container">
             <Tabs />

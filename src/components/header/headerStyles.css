@@ -32,6 +32,11 @@ header {
     gap: 1.2rem;
 }
 
+/* mobile */
+.header__mobile-icon {
+    font-size: 26px;
+}
+
 /* media */
 @media screen and (max-width: 767px) {
     .md-flex {
@@ -41,7 +46,7 @@ header {
 }
 
 @media screen and (min-width: 768px) {
-    .md-hidden {
+    .md-hidden { 
         visibility: hidden;
         display: none;
     }
