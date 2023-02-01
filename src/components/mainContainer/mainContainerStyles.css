@@ -1,6 +1,6 @@
 .main__container {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 30px;
     grid-template-areas: 
@@ -57,6 +57,8 @@
 
 /* CTA */
 .cta-main {
+    width: max-content;
+    margin: auto;
     grid-area: cta-main;
     display: flex;
     flex-direction: column;
@@ -82,12 +84,13 @@
 }
 
 @media screen and (max-width: 768px) {
-    .main__container h1 {
-      font-size: 50px;  
+    .main__container {
+      gap: 24px;
     }
-    
-    .cta-main {
-        align-items: flex-start;
+
+    .main__container h1 {
+      width: max-content;
+      font-size: 50px;  
     }
 
     .cta {

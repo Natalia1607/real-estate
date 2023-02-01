@@ -33,7 +33,7 @@ header {
 }
 
 /* media */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .md-flex {
         visibility: hidden;
         display: none;
