@@ -8,7 +8,7 @@
 }
 
 .form__bg {
-    background: #5A4141;
+    background: var(--color-white);
     height: 100%;
     width: 100%;
 }
@@ -75,6 +75,17 @@
     width: 190px;
 }
 
+.register__link {
+    color: var(--color-heading);
+    font-weight: 500;
+}
+
+.register__link:hover {
+    transition: var(--transition);
+    text-decoration-line: underline;
+}
+
+
 /* checkbox */
 .checkbox {
     display: flex;
@@ -111,5 +122,23 @@
     }
     100% {
         opacity: 1;
+    }
+}
+
+/* mobile */
+
+@media screen and (max-width: 768px) {
+    .form__container {
+        display: block;
+        background: linear-gradient(0deg, #e2dacb8f, #d3c1a252), url('../../assets/bg__mobile.jpg') center / cover no-repeat;
+        
+    }
+
+    .form__right h2 {
+        text-align: center;
+    }
+
+    .form {
+        margin: auto;
     }
 }

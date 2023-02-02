@@ -18,7 +18,7 @@ const Search = () => {
                 </select>
             </div>
             <div className="input-wrap">
-                <label for="site-search">City</label><br />
+                <label htmlFor="site-search">City</label><br />
                 <input type="search" name="city"/>
             </div>
             <div className="input-wrap">

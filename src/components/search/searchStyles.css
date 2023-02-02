@@ -34,3 +34,16 @@
     background: var(--color-primary-variant);
     color: var(--color-white);
 }
+
+/* mobile */
+@media screen and (max-width: 768px) {
+    .filter {
+        flex-wrap: wrap;
+        width: 100%;
+        margin: auto;
+    }
+
+    .filter .input-wrap {
+        width: 40%;
+    }
+}

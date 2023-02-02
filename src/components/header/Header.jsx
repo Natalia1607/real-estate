@@ -1,27 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import CTA from './CTA';
 import './headerStyles.css';
 
-import { RiMenu3Fill } from 'react-icons/ri';
-
 const Header = () => {
   return (
     <header className='container'>
-      <div className="header__container md-flex">
+      <div className="header__container">
         <Link to={'/'} className='header__logotip'>
           Dillantum.
           <small>Real Estate</small>
         </Link> 
         <CTA />
       </div>
-      <div className="header__container header__mobile md-hidden">
-        <Link to={'/'} className='header__logotip'>
-          Dillantum.
-          <small>Real Estate</small>
-        </Link>
-        <RiMenu3Fill className='header__mobile-icon icon'/>
-      </div>
+      {/* <div className={nav ? 'mobile-menu active' : 'mobile-menu'}>
+        <ul className="mobile-nav">
+          <Link to='home'><li>Home</li></Link>     
+          <Link to='destinations'><li>Destinations</li></Link>     
+          <Link to='carousel'><li>Travel</li></Link>     
+        </ul>
+        <div className='mobile-menu-bottom'>
+          <div className='menu-icons'>
+            <button>Search</button>
+            <button>Account</button>
+          </div>
+        </div>
+      </div> */}
     </header>
   )
 }

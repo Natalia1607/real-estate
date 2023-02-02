@@ -5,10 +5,10 @@ import { Cards, Tabs, Search, Footer } from '../components';
 import './page.css';
 
 const Rent = () => {
-  const location = useLocation();
+  const location = useLocation(); 
 
   return (
-    <div className="container">
+    <div className="container page__container">
         <div className='banner'>
             <p>Popular searches</p>
             <h2><Link to={'/rent'}>Rent</Link></h2>

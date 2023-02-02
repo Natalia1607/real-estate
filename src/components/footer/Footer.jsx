@@ -1,13 +1,13 @@
 import React from 'react';
-import { AiOutlineWhatsApp, AiOutlineMail } from 'react-icons/ai';
+import { IoIosMail, IoLogoWhatsapp } from 'react-icons/io';
 import './footerStyles.css';
 
 const Footer = () => {
   return (
     <div className='footer__container'>
       <div className="footer__icons">
-        <AiOutlineWhatsApp />
-        <AiOutlineMail />
+        <IoLogoWhatsapp />
+        <IoIosMail />
       </div>
       <div className="footer__docs">
         <a href="#">Terms and Conditions</a>

@@ -6,7 +6,7 @@ import Key from '../../assets/key.jpg';
 const SignInContainer = () => {
   return (
     <div className='container form__container'>
-    <div className='form__bg'><img src={Key} alt="key" /></div>
+    <div className='form__bg md-flex'><img src={Key} alt="key" /></div>
       <div className="form__right sign__right">
         <h2>Sign in</h2> 
         <form action="#" className='form'>

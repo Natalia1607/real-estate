@@ -25,6 +25,10 @@ header {
     letter-spacing: 1.3px;
 }
 
+.none {
+    display: none;
+}
+
 /* CTA */
 .cta {
     display: flex;
@@ -32,12 +36,41 @@ header {
     gap: 1.2rem;
 }
 
-/* mobile */
-.header__mobile-icon {
-    font-size: 26px;
+.header__menu {
+    position: absolute;
+    top: -100vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: var(--color-bg);
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
+    transition: 0.3s;
+    z-index: 100;
+}
+
+.active {
+    top: 80px;
+}
+
+.header__menu li {
+    padding: 1.2rem 1rem;
+    margin: 0 1rem;
+    border-bottom: 1px solid #ccc;
+
+}
+
+.header__nav {
+    margin: 1rem 0;
+}
+
+.header__menu-bottom {
+    padding: 1rem 0;
 }
 
 /* media */
+
 @media screen and (max-width: 767px) {
     .md-flex {
         visibility: hidden;
