@@ -3,8 +3,8 @@ import { Breadcrumb } from 'antd';
 import { Link } from 'react-router-dom';
 import Cards from '../card/Card';
 import Search from '../search/Search';
-import './tabsStyles.css'; 
 import Footer from '../footer/Footer';
+import './tabsStyles.css'; 
 
 const Tabs = () => {
   const [toggleState, setToggleState] = useState(1);
@@ -12,11 +12,6 @@ const Tabs = () => {
   const toggleTab = (index) => {
     setToggleState(index);
   };
-
-  const indent = {
-    marginBottom: 24,
-  };
-
   return (
     <>
         <div className='tabs__container'>
@@ -31,7 +26,7 @@ const Tabs = () => {
             <div className="content-tabs">
                 
                 <div className={toggleState === 2 ? "content  active-content" : "content"}>
-                    <Breadcrumb separator=">" className='breadcrumb' style={indent}>
+                    <Breadcrumb separator=">" className='breadcrumb mb24'>
                         <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
                         <Breadcrumb.Item href='/rent'>Property for Rent</Breadcrumb.Item>
                         <Breadcrumb.Item>Short Term (Daily)</Breadcrumb.Item>
@@ -42,7 +37,7 @@ const Tabs = () => {
                     <Footer />
                 </div>
                 <div className={toggleState === 3 ? "content  active-content" : "content"}>
-                    <Breadcrumb separator=">" className='breadcrumb' style={indent}>
+                    <Breadcrumb separator=">" className='breadcrumb mb24'>
                         <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
                         <Breadcrumb.Item href='/rent'>Property for Rent</Breadcrumb.Item>
                         <Breadcrumb.Item>Short Term (Monthly)</Breadcrumb.Item>
@@ -53,7 +48,7 @@ const Tabs = () => {
                     <Footer />
                 </div>
                 <div className={toggleState === 4 ? "content  active-content" : "content"}>
-                    <Breadcrumb separator=">" className='breadcrumb' style={indent}>
+                    <Breadcrumb separator=">" className='breadcrumb mb24'>
                         <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
                         <Breadcrumb.Item href='/rent'>Property for Rent</Breadcrumb.Item>
                         <Breadcrumb.Item>Long Term (Yearly)</Breadcrumb.Item>
@@ -64,7 +59,7 @@ const Tabs = () => {
                     <Footer />
                 </div>
                 <div className={toggleState === 5 ? "content  active-content" : "content"}>
-                    <Breadcrumb separator=">" className='breadcrumb' style={indent}>
+                    <Breadcrumb separator=">" className='breadcrumb mb24'>
                         <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
                         <Breadcrumb.Item href='/rent'>Property for Rent</Breadcrumb.Item>
                         <Breadcrumb.Item>Commercial for Rent</Breadcrumb.Item>

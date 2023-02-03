@@ -1,5 +1,4 @@
 .main__container {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 30px;
@@ -16,9 +15,8 @@
 
 .main__container h1 {
     grid-area: h1;
-    width: 488px;
     margin-top: 178px;
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading), serif;
     font-weight: 400;
     font-size: 70px;
     line-height: 130%;
@@ -59,11 +57,7 @@
     width: max-content;
     margin: auto;
     grid-area: cta-main;
-    display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 1.2rem;
     margin-bottom: 60px;
 }
 

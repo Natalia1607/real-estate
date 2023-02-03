@@ -6,15 +6,15 @@ import { BsFillPatchCheckFill } from 'react-icons/bs';
 
 const Cards = () => {
   return (
-    <div className='cards'>
+    <div className='cards flex jc-sb mb24'>
       <div className='card__wrapp'>
         <img className='card__img' src={Card} alt="" />
         <div className='card__data'>
-          <h4>Ocean Heights</h4>
+          <h4 className='mb12'>Ocean Heights</h4>
           <p>Dubai Marina, Dubai</p>
-          <p className='card__data_price'>$850,000</p>
+          <p className='card__data_price mb36'>$850,000</p>
           <hr />
-          <div className='card__icons'>
+          <div className='card__icons mt24'>
             <div>
               <BsFillPatchCheckFill className='icon' />
               <p>3 <span>Beds</span></p>
@@ -38,11 +38,11 @@ const Cards = () => {
       <div className='card__wrapp'>
         <img className='card__img' src={Card} alt="" />
         <div className='card__data'>
-          <h4>Ocean Heights</h4>
+          <h4 className='mb12'>Ocean Heights</h4>
           <p>Dubai Marina, Dubai</p>
-          <p className='card__data_price'>$850,000</p>
+          <p className='card__data_price mb36'>$850,000</p>
           <hr />
-          <div className='card__icons'>
+          <div className='card__icons mt24'>
             <div>
               <BsFillPatchCheckFill className='icon' />
               <p>3 <span>Beds</span></p>
@@ -66,11 +66,11 @@ const Cards = () => {
       <div className='card__wrapp'>
         <img className='card__img' src={Card} alt="" />
         <div className='card__data'>
-          <h4>Ocean Heights</h4>
+          <h4 className='mb12'>Ocean Heights</h4>
           <p>Dubai Marina, Dubai</p>
-          <p className='card__data_price'>$850,000</p>
+          <p className='card__data_price mb36'>$850,000</p>
           <hr />
-          <div className='card__icons'>
+          <div className='card__icons mt24'>
             <div>
               <BsFillPatchCheckFill className='icon' />
               <p>3 <span>Beds</span></p>

@@ -30,6 +30,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background: var(--color-bg);
+    color: var(--color-text);
 }
 
 html,
@@ -41,7 +42,7 @@ body {
     display: none;
 }
 
-/* General styles */
+/* =====General styles===== */
 
 .container {
     width: var(--container-width-lg);
@@ -61,7 +62,7 @@ li {
 .btn {
     display: inline-block;
     width: max-content;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-main);
     font-size: 16px;
     padding: 0.6rem 1.5rem;
     font-weight: 600;
@@ -98,7 +99,98 @@ input {
     cursor: pointer;
 }
 
-/* media */
+/* display type */
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+/* flex-* */
+
+.jc-c {
+    justify-content: center;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+.jc-fe {
+    justify-content: flex-end;
+}
+
+.ai-c {
+    align-items: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.gap {
+    gap: 24px;
+}
+
+/* paddings */
+
+.pt12 {
+    padding-top: 12px;
+}
+
+.pt24 {
+    padding-top: 24px;
+}
+
+.pt48 {
+    padding-top: 48px;
+}
+
+.pb12 {
+    padding-bottom: 12px;
+}
+
+.pb24 {
+    padding-bottom: 24px;
+}
+
+.pb48 {
+    padding-bottom: 48px;
+}
+
+/* margins */
+
+.mt12 {
+    margin-top: 12px;
+}
+
+.mt24 {
+    margin-top: 24px;
+}
+
+.mt48 {
+    margin-top: 48px;
+}
+
+.mb12 {
+    margin-bottom: 12px;
+}
+
+.mb24 {
+    margin-bottom: 24px;
+}
+
+.mb36 {
+    margin-bottom: 36px;
+}
+
+.mb48 {
+    margin-bottom: 48px;
+}
+
+/* =====media===== */
 
 @media screen and (max-width: 1024px) {
     .container {

@@ -8,13 +8,13 @@ import './mask.js';
 
 const RegisterContainer = () => {
   return (
-    <div className='container form__container'>
+    <div className='container form__container grid'>
       <div className='form__bg md-flex'><img src={Table} alt="" /></div>
       <div className="form__right register__right">
         <p>Already a member? <Link to={'/sign-in'} className='register__link'>Sign In</Link></p>
-        <h2>Register</h2>
+        <h2 className='mb36'>Register</h2>
         <form action="#" className='form'>
-            <div className="form__data register__data">
+            <div className="form__data register__data flex jc-sb gap">
                 <div className="input-wrap">
                   <label>Name</label><br />
                   <input type="text" />
@@ -32,7 +32,7 @@ const RegisterContainer = () => {
                   <input type="password" />
                 </div>
             </div>
-            <label className = "checkbox">
+            <label className = "checkbox flex pt12 pb24">
               <input type="checkbox" className="checkbox__input" />
               <p className ='checkbox__text'>Creating an account means you agree to our <a href="#" className='register__link'> Terms of Service</a>, <a href="#" className='register__link'> Privacy Policy</a>, and our default <a href="#" className='register__link'> Notification Settings</a>.</p>
             </label>

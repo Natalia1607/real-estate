@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Header, MainContainer, RegisterContainer, SignInContainer } from './components';
-import { Buy, Rent } from './page';
+import { BuyPage, RentPage, UserPage } from './pages';
 
 const App = () => {
   return (
@@ -12,13 +12,18 @@ const App = () => {
           <Route path='/*' element={<MainContainer />}/>
           <Route path='/register' element={<RegisterContainer />}/>
           <Route path='/sign-in' element={<SignInContainer />}/>
-          <Route path='/rent' element={<Rent />}>
-            <Route path='/rent/rent-daily' element={<Rent />}/>
-            <Route path='/rent/rent-monthly' element={<Rent />}/>
-            <Route path='/rent/rent-yearly' element={<Rent />}/>
-            <Route path='/rent/rent-commercial' element={<Rent />}/>
+          <Route path='/rent' element={<RentPage />}>
+            <Route path='/rent/rent-daily' element={<RentPage />}/>
+            <Route path='/rent/rent-monthly' element={<RentPage />}/>
+            <Route path='/rent/rent-yearly' element={<RentPage />}/>
+            <Route path='/rent/rent-commercial' element={<RentPage />}/>
           </Route>
-          <Route path='/buy' element={<Buy />}/>
+          <Route path='/buy' element={<BuyPage />}/>
+          <Route path='/personal_account' element={<UserPage />}> 
+            <Route path='/personal_account/searches' element={<UserPage />}/>
+            <Route path='/personal_account/favorites' element={<UserPage />}/>
+            <Route path='/personal_account/ads' element={<UserPage />}/>
+          </Route>
         </Routes>
       </main>
     </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { RiMenu3Fill, RiCloseFill } from 'react-icons/ri';
+import { RiMenu3Fill, RiCloseFill, RiUser3Fill } from 'react-icons/ri';
 
 const CTA = () => {
   const [ nav, setNav ] = useState(false);
@@ -9,7 +9,7 @@ const CTA = () => {
   if(location.pathname === '/' || location.pathname === '/register' || location.pathname === '/sign-in') {
     return (  
       <>
-        <div className='cta'>
+        <div className='cta flex jc-sb gap'>
           <Link to={'/sign-in'} className='btn'>Sign in</Link>
           <Link to={'/register'} className='btn btn-primary'>Register</Link>
         </div>
@@ -18,8 +18,11 @@ const CTA = () => {
   }
   return ( 
     <>
-      <div className='hamburger' onClick={handleNav}>
-          {!nav ? (<RiMenu3Fill className='icon' size={26} />) : (<RiCloseFill className='icon' size={26}/>)}
+      <div className='header__icons flex ai-c'>
+        <Link to={'/personal_account'}><RiUser3Fill className='icon' size={20}/></Link>
+        <div className='hamburger' onClick={handleNav}>
+            {!nav ? (<RiMenu3Fill className='icon' size={26} />) : (<RiCloseFill className='icon' size={26}/>)}
+        </div>
       </div>
       <div className={nav ? 'header__menu container active' : 'header__menu container'}>
         <ul className="header__nav">
@@ -36,7 +39,7 @@ const CTA = () => {
           <Link to={'#'}><li>Blog</li></Link>     
         </ul>
         <div className='header__menu-bottom'>
-          <div className='cta'>
+          <div className='cta flex gap jc-c'>
             <Link to={'/sign-in'} className='btn'>Sign in</Link>
             <Link to={'/register'} className='btn btn-primary'>Register</Link>
           </div>

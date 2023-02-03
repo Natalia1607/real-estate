@@ -6,8 +6,8 @@ import './headerStyles.css';
 const Header = () => {
   return (
     <header className='container'>
-      <div className="header__container">
-        <Link to={'/'} className='header__logotip'>
+      <div className="header__container flex ai-c jc-sb">
+        <Link to={'/'} className='header__logotip flex'>
           Dillantum.
           <small>Real Estate</small>
         </Link> 
