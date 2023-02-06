@@ -8,7 +8,7 @@ const CTAMain = () => {
         <Link to={'/rent'} className='btn'>Rent</Link>
         <Link to={'/buy'} className='btn'>Buy</Link>
       </div>
-      <a href='!#' className='btn btn-primary'>Upload</a>
+      <a href='!#' className='btn'>Upload</a>
     </div>
   )
 }

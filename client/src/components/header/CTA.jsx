@@ -1,9 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from '../../config/firebase';
+
 import { RiMenu3Fill, RiCloseFill, RiUser3Fill } from 'react-icons/ri';
 
 const CTA = () => {
   const [ nav, setNav ] = useState(false);
+  const [authUser, setAuthUser] = useState(null);
+  useEffect(() => {
+    const listen = onAuthStateChanged(auth, (user) => {
+        if (user) {
+            setAuthUser(user);
+        } else {
+            setAuthUser(null);
+        }
+    });
+  }, []);
   const handleNav = () => setNav(!nav);
   const location = useLocation(); 
   if(location.pathname === '/' || location.pathname === '/register' || location.pathname === '/sign-in') {
@@ -11,15 +25,17 @@ const CTA = () => {
       <>
         <div className='cta flex jc-sb gap'>
           <Link to={'/sign-in'} className='btn'>Sign in</Link>
-          <Link to={'/register'} className='btn btn-primary'>Register</Link>
+          <Link to={'/register'} className='btn'>Register</Link>
         </div>
       </>
     )
-  }
+  };
+
+  
   return ( 
     <>
       <div className='header__icons flex ai-c'>
-        <Link to={'/personal_account'}><RiUser3Fill className='icon' size={20}/></Link>
+        {authUser ? <Link to={'/personal_account'}><RiUser3Fill className='icon' size={20}/></Link> : <p className='none'></p>}
         <div className='hamburger' onClick={handleNav}>
             {!nav ? (<RiMenu3Fill className='icon' size={26} />) : (<RiCloseFill className='icon' size={26}/>)}
         </div>
@@ -41,7 +57,7 @@ const CTA = () => {
         <div className='header__menu-bottom'>
           <div className='cta flex gap jc-c'>
             <Link to={'/sign-in'} className='btn'>Sign in</Link>
-            <Link to={'/register'} className='btn btn-primary'>Register</Link>
+            <Link to={'/register'} className='btn'>Register</Link>
           </div>
         </div>
       </div>

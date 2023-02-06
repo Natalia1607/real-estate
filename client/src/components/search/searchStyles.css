@@ -26,15 +26,6 @@
     font-weight: 500;
 }
 
-.filter .btn {
-    padding: 1rem 2.5rem;
-}
-
-.filter .btn:hover {
-    background: var(--color-primary-variant);
-    color: var(--color-white);
-}
-
 /* mobile */
 @media screen and (max-width: 768px) {
     .filter {

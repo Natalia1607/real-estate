@@ -13,7 +13,7 @@
     --font-main: 'Montserrat', sans-serif;
     --font-heading: 'Playfair Display', serif;
 
-    --transition: all 700ms ease;
+    --transition: all 700ms ease-out;
 
     --container-width-lg: 75%;
     --container-width-md: 86%;
@@ -60,7 +60,7 @@ li {
 }
 
 .btn {
-    display: inline-block;
+    display: block;
     width: max-content;
     font-family: var(--font-main);
     font-size: 16px;
@@ -68,26 +68,9 @@ li {
     font-weight: 600;
     background: transparent;
     color: var(--color-text);
-    border: 1px solid var(--color-primary-variant);
+    border: 2px solid var(--color-primary-variant);
     border-radius: 0.4rem;
     cursor: pointer;
-    transition: var(--transition);
-}
-
-.btn:hover {
-    background-color: var(--color-bg);
-    border-color: transparent;
-    transition: var(--transition);
-}
-
-.btn-primary {
-    background: var(--color-primary-variant);
-    color: var(--color-bg);
-}
-
-.btn-primary:hover {
-    color: var(--color-text);
-    transition: var(--transition);
 }
 
 input {
@@ -128,6 +111,10 @@ input {
 
 .column {
     flex-direction: column;
+}
+
+.gap_6 {
+    gap: 6px;
 }
 
 .gap {

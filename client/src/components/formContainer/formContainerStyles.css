@@ -28,12 +28,21 @@
     margin-top: 20vh;
 }
 
+.sign__right .btn {
+    width: 262px;
+}
+
 .register__right {
     margin-top: 10vh;
 }
 
 .form {
     width: 410px;
+}
+
+#form__opacity {
+    opacity: 0;
+    transition: var(--transition);
 }
 
 .form__data {
@@ -85,18 +94,6 @@
 
 .checkbox__input {
     margin-top: 8px;
-}
-
-/* button */
-.form .btn {
-    background: var(--color-primary);
-    border-color: var(--color-primary);
-    color: var(--color-text);
-}
-
-.form .btn:hover {
-    border: 1px solid var(--color-primary);
-    background: transparent
 }
 
 /* animation */
