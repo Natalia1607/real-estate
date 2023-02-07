@@ -1,5 +1,4 @@
 import React from 'react';
-import './imgCarouselStyles.css';
 
 import slide1 from '../../assets/slide1.jpg';
 import slide2 from '../../assets/slide2.jpg';
@@ -9,6 +8,7 @@ import slide5 from '../../assets/slide5.jpg';
 import slide6 from '../../assets/slide6.jpg';
 import Slider from 'react-slick';
 
+import './imgCarouselStyles.css';
 const ImgCarousel = () => {
     const settings = {
         arrows: false,

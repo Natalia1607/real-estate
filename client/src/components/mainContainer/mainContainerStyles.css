@@ -11,6 +11,7 @@
 
 .main__container_carousel {
     grid-area: main__container_carousel;
+    width: 100%;
 }
 
 .main__container h1 {
@@ -65,6 +66,29 @@
     padding: 0.6rem 3rem;
 }
 
+@media screen and (max-width: 1200px) {
+    .main__container {
+      grid-template-columns: 1fr 2fr;
+      justify-items: center;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .main__container {
+        gap: 0px;
+    }
+
+    .main__container h1 {
+        font-size: 64px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .main__container h1 {
+        font-size: 56px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .main__container {
         display: block;
@@ -76,7 +100,6 @@
         margin-right: auto;
         margin-bottom: 40vh;
         width: max-content;
-        font-size: 54px;  
         text-align: center;
     }
 

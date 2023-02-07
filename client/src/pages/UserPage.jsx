@@ -37,7 +37,7 @@ const UserPage = () => {
               <span>My Ads</span>
             </Link>
           </div>
-          <a href='!#' className='btn btn-primary'>Upload</a>
+          <a href='!#' className='btn btn-primary hover-diagonal_light'>Upload</a>
         </div>
         <Cards />
         <Footer />

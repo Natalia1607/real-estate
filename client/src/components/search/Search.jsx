@@ -31,7 +31,7 @@ const Search = () => {
                     <option value="Top Rated">Top Rated</option>
                 </select>
             </div>
-            <button className='btn'>Search</button>
+            <button className='btn btn-primary hover-diagonal_light'>Search</button>
         </form>
     </div>
   )

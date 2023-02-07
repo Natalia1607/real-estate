@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-import { onAuthStateChanged } from 'firebase/auth';
+import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from '../../config/firebase';
 
 import { RiMenu3Fill, RiCloseFill, RiUser3Fill } from 'react-icons/ri';
+
+import { useStateValue } from '../../context/StateProvider';
 
 const CTA = () => {
   const [ nav, setNav ] = useState(false);
@@ -17,9 +19,21 @@ const CTA = () => {
             setAuthUser(null);
         }
     });
+
+    return () => {
+      listen();
+    };
   }, []);
+
+  const userSignOut = () => {
+    signOut(auth).then(() => {
+      console.log('sign out successful');
+    }).catch(error => console.log(error));
+  };
+
   const handleNav = () => setNav(!nav);
   const location = useLocation(); 
+
   if(location.pathname === '/' || location.pathname === '/register' || location.pathname === '/sign-in') {
     return (  
       <>
@@ -30,35 +44,48 @@ const CTA = () => {
       </>
     )
   };
-
-  
   return ( 
     <>
       <div className='header__icons flex ai-c'>
-        {authUser ? <Link to={'/personal_account'}><RiUser3Fill className='icon' size={20}/></Link> : <p className='none'></p>}
+        {
+          authUser 
+          ? <Link to={'/personal_account'}><RiUser3Fill className='icon' size={20}/></Link> 
+          : <p className='none'></p>
+        }
         <div className='hamburger' onClick={handleNav}>
-            {!nav ? (<RiMenu3Fill className='icon' size={26} />) : (<RiCloseFill className='icon' size={26}/>)}
+            {
+              !nav 
+              ? (<RiMenu3Fill className='icon' size={26} />) 
+              : (<RiCloseFill className='icon' size={26}/>)
+            }
         </div>
       </div>
       <div className={nav ? 'header__menu container active' : 'header__menu container'}>
         <ul className="header__nav">
-          <Link to={'/'}><li>Home</li></Link> 
-          {location.pathname !== '/rent' 
-          ? <Link to={'/rent'}><li>Property for Rent</li></Link>     
-          : <Link to={'#'} className='none'><li></li></Link>   
+          <li><Link to={'/'}>Home</Link></li>
+          {
+            location.pathname !== '/rent' 
+            ? <li><Link to={'/rent'}>Property for Rent</Link></li>     
+            : <Link to={'#'} className='none'><li></li></Link>   
           }     
-          {location.pathname !== '/buy' 
-          ? <Link to={'/buy'}><li>Property for Buy</li></Link>     
-          : <Link to={'#'} className='none'><li></li></Link>   
+          {
+            location.pathname !== '/buy' 
+            ? <li><Link to={'/buy'}>Property for Buy</Link></li>     
+            : <Link to={'#'} className='none'><li></li></Link>   
           }     
-          <Link to={'#'}><li>Agent Portal</li></Link>     
-          <Link to={'#'}><li>Blog</li></Link>     
+          <li><Link to={'#'}>Agent Portal</Link></li>    
+          <li><Link to={'#'}>Blog</Link></li>     
         </ul>
         <div className='header__menu-bottom'>
-          <div className='cta flex gap jc-c'>
-            <Link to={'/sign-in'} className='btn'>Sign in</Link>
-            <Link to={'/register'} className='btn'>Register</Link>
-          </div>
+          {
+            authUser 
+            ? <Link to={'!#'} className='btn m-auto' onClick={userSignOut}>Sign out</Link>
+            : 
+            <div className='cta flex gap jc-c'>
+              <Link to={'/sign-in'} className='btn'>Sign in</Link>
+              <Link to={'/register'} className='btn'>Register</Link>
+            </div>
+          }  
         </div>
       </div>
     </> 

@@ -4,7 +4,6 @@
     background: linear-gradient(0deg, rgba(24, 24, 24, 0.3), rgba(24, 24, 24, 0.3)), url(../assets/banner.jpg);
     background-position: center;
     background-size: cover;
-
     font-weight: 600;
     font-size: 18px;
     line-height: 130%;
@@ -21,10 +20,6 @@
 
 .banner > h2 {
     font-size: 40px;
-}
-
-.content__container {
-    background-color: var(--color-white);
 }
 
 .breadcrumb {

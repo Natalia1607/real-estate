@@ -16,6 +16,17 @@
   outline: none;
 }
 
+@media screen and (max-width: 1200px) {
+  .carousel {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slick-list {
+    height: auto!important;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .carousel {
     grid-template-columns: 1fr;

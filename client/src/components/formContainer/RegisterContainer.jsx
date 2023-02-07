@@ -65,7 +65,7 @@ const RegisterContainer = () => {
               <input type="checkbox" className="checkbox__input" />
               <p className ='checkbox__text'>Creating an account means you agree to our <a href="#" className='register__link'> Terms of Service</a>, <a href="#" className='register__link'> Privacy Policy</a>, and our default <a href="#" className='register__link'> Notification Settings</a>.</p>
             </label>
-            <button className='btn btn-primary' type='submit'>Create Account</button>
+            <button className='btn btn-primary hover-diagonal_light' type='submit'>Create Account</button>
         </form>
         </div>
     </div>

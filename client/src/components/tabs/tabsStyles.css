@@ -49,11 +49,6 @@
     display: block;
 }
 
-.filter__container,
-.content-tabs {
-    background: var(--color-white);
-}
-
 /* mobile */
 @media screen and (max-width: 768px) {
     .tabs {

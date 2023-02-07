@@ -12,6 +12,10 @@
     width: 100%;
 }
 
+.form__bg  img {
+    width: 100%;
+}
+
 .form__right > p {
     margin-bottom: 60px;
     text-align: right;
@@ -28,8 +32,8 @@
     margin-top: 20vh;
 }
 
-.sign__right .btn {
-    width: 262px;
+.sign__right .btn:hover {
+    color: var(--color-text);
 }
 
 .register__right {
@@ -112,19 +116,29 @@
 }
 
 /* mobile */
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .form__container {
         display: block;
         background: linear-gradient(0deg, #e2dacb8f, #d3c1a252), url('../../assets/bg__mobile.jpg') center / cover no-repeat;
-        
+    }
+
+    .form__bg.md-flex {
+        display: none;
+    }
+
+    .form {
+        margin: auto;
     }
 
     .form__right h2 {
         text-align: center;
     }
 
-    .form {
-        margin: auto;
+    .sign__right .btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .sign__right .btn.btn-primary.hover-diagonal_light {
+        margin-left: 0;
     }
 }
