@@ -4,7 +4,7 @@ import './footerStyles.css';
 
 const Footer = () => {
   return (
-    <div className='footer__container'>
+    <footer className='footer__container'>
       <div className="footer__icons">
         <a href='https://wa.me/79519067454'><IoLogoWhatsapp className='icon' size={24} /></a>
         <a href="mailto:dillantum@gmail.com"><IoIosMail className='icon' size={24} /></a>
@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="copyright">
         Copyright © 2023 Dillantum.ae. All Rights Reserved
       </div>
-    </div>
+    </footer>
   )
 }
 

@@ -3,12 +3,14 @@ import './cardStyles.css';
 
 import Card from '../../assets/card.jpg';
 import { BsFillPatchCheckFill } from 'react-icons/bs';
+import { MdOutlineFavoriteBorder, MdOutlineFavorite } from 'react-icons/md';
 
 const Cards = () => {
   return (
     <div className='cards flex jc-sb mb24'>
       <div className='card__wrapp'>
         <img className='card__img' src={Card} alt="" />
+        <MdOutlineFavoriteBorder className='icon card__favourite' size={24} />
         <div className='card__data'>
           <h4 className='mb12'>Ocean Heights</h4>
           <p>Dubai Marina, Dubai</p>
@@ -37,6 +39,7 @@ const Cards = () => {
       
       <div className='card__wrapp'>
         <img className='card__img' src={Card} alt="" />
+        <MdOutlineFavoriteBorder className='icon card__favourite' size={24} />
         <div className='card__data'>
           <h4 className='mb12'>Ocean Heights</h4>
           <p>Dubai Marina, Dubai</p>
@@ -65,6 +68,7 @@ const Cards = () => {
 
       <div className='card__wrapp'>
         <img className='card__img' src={Card} alt="" />
+        <MdOutlineFavoriteBorder className='icon card__favourite' size={24} />
         <div className='card__data'>
           <h4 className='mb12'>Ocean Heights</h4>
           <p>Dubai Marina, Dubai</p>

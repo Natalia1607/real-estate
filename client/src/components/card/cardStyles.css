@@ -1,7 +1,15 @@
 .card__wrapp {
+    position: relative;
     width: 348px;
     height: 493px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.card__favourite {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: var(--color-white);
 }
 
 .card__img {

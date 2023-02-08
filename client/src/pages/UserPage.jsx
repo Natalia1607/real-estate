@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Breadcrumb } from 'antd';
 import { Footer, Cards } from '../components';
 
@@ -10,17 +10,39 @@ import { IoIosListBox } from 'react-icons/io';
 import './page.css';
 
 const UserPage = () => {
-  const [toggleState, setToggleState] = useState(1);
-
-  const toggleTab = (index) => {
-    setToggleState(index);
-  };
+  const location = useLocation();
   return (
     <div className="container page__container">
         <div className='banner'></div>
         <Breadcrumb separator=">" className='breadcrumb mt12 mb24'>
             <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-            <Breadcrumb.Item>Personal account</Breadcrumb.Item>
+            <Breadcrumb.Item href="/personal_account">Personal account</Breadcrumb.Item>
+            <Breadcrumb.Item>
+            {
+              location.pathname === '/personal_account/searches'
+              ? 
+              <>
+                Searches
+              </> 
+              : <p className='none'></p>
+            }
+            {
+              location.pathname === '/personal_account/favorites'
+              ? 
+              <>
+                Favorites
+              </> 
+              : <p className='none'></p>
+            }
+            {
+              location.pathname === '/personal_account/ads'
+              ? 
+              <>
+                Ads
+              </> 
+              : <p className='none'></p>
+            }
+            </Breadcrumb.Item>
         </Breadcrumb>
         <div className='flex jc-sb mb24'>
           <div className="user__icons flex jc-c gap">
@@ -39,7 +61,14 @@ const UserPage = () => {
           </div>
           <a href='!#' className='btn btn-primary hover-diagonal_light'>Upload</a>
         </div>
-        <Cards />
+        {
+          location.pathname === '/personal_account/favorites'
+          ? 
+          <>
+
+          </> 
+          : <p className='none'></p>
+        }
         <Footer />
     </div>
   )
